@@ -1,5 +1,20 @@
 import './Step.css'
+import {useState} from 'react'
+import Email from './Estagios/Email';
+import Plano from './Estagios/Plano'
 export default function Step(){
+
+    interface MyComponentProps {
+        // Add any props needed for your component here
+      }
+      
+      const MyComponent: React.FC<MyComponentProps> = (props: MyComponentProps) => {
+        const [showEmail, setEmail] = useState(true);
+      
+        const handleComponentToggle = () => {
+          setEmail(!showEmail);
+        }
+      
     return(
         <div className="step-container">
             <div className='containerSteps'>
@@ -33,8 +48,13 @@ export default function Step(){
                 </div>
             </div>
             <div className='containerInf'>
-                 email cada
+                <div>
+                    <button onClick={handleComponentToggle}>
+                        Toggle Component
+                    </button>
+                    {showEmail ? <Email /> : <Plano />}
+                </div>
             </div>
         </div>
     )
-}
+}}
