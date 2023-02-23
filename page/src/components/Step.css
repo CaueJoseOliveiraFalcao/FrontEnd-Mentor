@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Ubuntu-l';
+    src: url('../fonts/Ubuntu-Regular.ttf') format('truetype');
+  }
+
+.step-container{
+    background-color:white;
+    display: flex;
+    width: 50rem;
+    height: 30rem;
+    border-radius: 5px;
+    padding: 1rem;
+}
+.SelectNumber{
+    background-color:white !important;
+    color:rgb(50, 50, 255)!important;
+}
+.stepnum{
+    border-style: solid;
+    padding: 0.7rem;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-right: 2rem;
+    text-align: center;
+    border-color: white;
+    background-color: transparent;
+    color: white;
+}
+.containerSteps{
+    background-color: rgb(50, 50, 255);
+    width: 30%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Ubuntu';
+}
+.containerInf{
+    background-color: aqua;
+    width: 70%;
+}
+.steps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.steps-if{
+    padding: 0;
+    margin: 0;
+    color: white;
+    width: 118px;
+}
+.if1{
+    margin: 2px 0px;
+    font-family: 'Ubuntu-l';
+    padding: 0;
+    font-size: 13px;;
+}
+.if2{
+    margin: 0;
+    padding: 0;
+}
