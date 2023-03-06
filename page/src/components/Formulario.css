@@ -2,3 +2,15 @@
     display: flex;
     flex-direction: column;
 }
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Ubuntu-l';
+    src: url('../fonts/Ubuntu-Regular.ttf') format('truetype');
+  }
+
+
+  
