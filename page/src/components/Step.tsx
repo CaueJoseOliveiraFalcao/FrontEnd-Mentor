@@ -1,9 +1,14 @@
 import './Step.css'
 import {useState} from 'react'
-import Email from './Estagios/Email';
-import Plano from './Estagios/Plano'
+import Step1 from './Estagios/Step1';
+import Step2 from './Estagios/Step2';
 export default function Step(){
+    const [etapaAtual , setEtapa] = useState(1);
 
+    const proximoPasso = () =>{
+        setEtapa(etapaAtual + 1 );
+
+    }
 
     return(
         <div className="step-container">
@@ -40,6 +45,10 @@ export default function Step(){
             <div className='containerInf'>
                 <div>
                     <div>
+                        {etapaAtual === 1 && <Step1/>}
+                        {etapaAtual >= 2 && <Step2/>}
+                        
+                        <button  onClick={proximoPasso}>Proximo passo</button>
                     </div>
                 </div>
             </div>

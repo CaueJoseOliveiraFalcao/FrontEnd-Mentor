@@ -1,0 +1,4 @@
+.formulario_divP{
+    display: flex;
+    flex-direction: column;
+}

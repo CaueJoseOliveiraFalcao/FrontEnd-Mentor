@@ -14,7 +14,6 @@
     width: 50rem;
     height: 30rem;
     border-radius: 5px;
-    padding: 1rem;
 }
 .SelectNumber{
     background-color:white !important;
@@ -44,6 +43,7 @@
 .containerInf{
     background-color: aqua;
     width: 70%;
+    padding: 0 3rem;
 }
 .steps{
     display: flex;
