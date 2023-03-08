@@ -1,12 +1,24 @@
 import './Step.css'
-import {useState} from 'react'
+import {useState , useEffect} from 'react'
 import Step1 from './Estagios/Step1';
 import Step2 from './Estagios/Step2';
-export default function Step(){
+import { inflate } from 'zlib';
+
+interface Props {
+    isValid : boolean;
+  };
+
+export default function Step(isValid : Props){
     const [etapaAtual , setEtapa] = useState(1);
+    const [Valido,setValido] = useState(false);
+    console.log(Valido,'o fela da ')
+    useEffect(() => {
+        setValido(isValid.isValid);
+      }, [isValid.isValid])
 
     const proximoPasso = () =>{
         setEtapa(etapaAtual + 1 );
+    
 
     }
 

@@ -1,13 +1,23 @@
 import './Formulario.css';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 interface User {
   name: string;
   email: string;
   phoneNumber: string;
 }
+interface isValid {
+  isValid : boolean;
+};
 
-export default function Formulario() {
+export default function Formulario(props : isValid) {
+  const [isValid, setValid] = useState(false)
+
+  useEffect(() => {
+    setValid(props.isValid);
+  }, [props.isValid])
+
+  console.log(isValid)
   const [user, setUser] = useState<User>({
     name: "",
     email: "",
@@ -23,11 +33,11 @@ export default function Formulario() {
     event.preventDefault();
 
     if (user.name.length === 0) {
-      console.log("O campo nome é obrigatório.");
+      alert("O campo nome é obrigatório.");
     } else if (user.email.length === 0) {
-      console.log("O campo e-mail é obrigatório.");
+      alert("O campo e-mail é obrigatório.");
     } else if (user.phoneNumber.length === 0) {
-      console.log("O campo número de telefone é obrigatório.");
+      alert("O campo número de telefone é obrigatório.");
     } else {
       console.log("Usuário:", user);
     }

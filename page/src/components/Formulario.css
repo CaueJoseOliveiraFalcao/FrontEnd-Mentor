@@ -1,7 +1,4 @@
-.formulario_divP{
-    display: flex;
-    flex-direction: column;
-}
+
 @font-face {
     font-family: 'Ubuntu';
     src: url('../fonts/Ubuntu-Bold.ttf') format('truetype');
@@ -12,5 +9,20 @@
     src: url('../fonts/Ubuntu-Regular.ttf') format('truetype');
   }
 
+  .formulario_divP{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu-l';
+}
+.formulario_divP label{
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 0;
+}
 
+.formulario_divP input{
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 15px;
+}
   
