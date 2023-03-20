@@ -6,18 +6,10 @@ interface User {
   email: string;
   phoneNumber: string;
 }
-interface isValid {
-  isValid : boolean;
-};
 
-export default function Formulario(props : isValid) {
-  const [isValid, setValid] = useState(false)
+export default function Formulario() {
 
-  useEffect(() => {
-    setValid(props.isValid);
-  }, [props.isValid])
 
-  console.log(isValid)
   const [user, setUser] = useState<User>({
     name: "",
     email: "",
@@ -57,7 +49,7 @@ export default function Formulario(props : isValid) {
         Número de telefone:
         <input type="tel" name="phoneNumber" value={user.phoneNumber} onChange={handleChange} />
       </label>
-      <button type="submit">Enviar</button>
+      <button type="submit" >Verificar</button>
     </form>
   );
 }

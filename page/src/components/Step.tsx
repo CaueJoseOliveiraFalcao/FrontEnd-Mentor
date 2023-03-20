@@ -8,14 +8,10 @@ interface Props {
     isValid : boolean;
   };
 
-export default function Step(isValid : Props){
+export default function Step(){
     const [etapaAtual , setEtapa] = useState(1);
     const [Valido,setValido] = useState(false);
-    console.log(Valido,'o fela da ')
-    useEffect(() => {
-        setValido(isValid.isValid);
-      }, [isValid.isValid])
-
+    
     const proximoPasso = () =>{
         setEtapa(etapaAtual + 1 );
     
@@ -57,7 +53,7 @@ export default function Step(isValid : Props){
             <div className='containerInf'>
                 <div>
                     <div>
-                        {etapaAtual === 1 && <Step1/>}
+                        {etapaAtual === 1 && <Step1 />}
                         {etapaAtual >= 2 && <Step2/>}
                         
                         <button  onClick={proximoPasso}>Proximo passo</button>
